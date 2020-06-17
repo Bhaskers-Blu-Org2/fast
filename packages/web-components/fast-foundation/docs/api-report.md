@@ -782,6 +782,52 @@ export enum TextFieldType {
     url = "url"
 }
 
+// @public (undocumented)
+export class Tooltip extends FASTElement {
+    constructor();
+    // (undocumented)
+    anchor: string;
+    // (undocumented)
+    anchorElement: HTMLElement | null;
+    // (undocumented)
+    connectedCallback(): void;
+    // (undocumented)
+    delay: number;
+    // (undocumented)
+    disconnectedCallback(): void;
+    // (undocumented)
+    handlePositionChange: (ev: Event) => void;
+    // (undocumented)
+    hidden: boolean;
+    // (undocumented)
+    horizontalDefaultPosition: string | undefined;
+    // (undocumented)
+    horizontalInset: string;
+    // (undocumented)
+    horizontalPositioningMode: string;
+    // (undocumented)
+    position: TooltipPosition | null;
+    // Warning: (ae-forgotten-export) The symbol "AnchoredRegion" needs to be exported by the entry point index.d.ts
+    region: AnchoredRegion;
+    tooltipRoot: HTMLDivElement;
+    // (undocumented)
+    upDatePositionCSS: () => void;
+    // (undocumented)
+    verticalDefaultPosition: string | undefined;
+    // (undocumented)
+    verticalInset: string;
+    // (undocumented)
+    verticalPositioningMode: string;
+    // (undocumented)
+    viewport: HTMLElement | null;
+}
+
+// @public (undocumented)
+export type TooltipPosition = "top" | "right" | "bottom" | "left";
+
+// @public (undocumented)
+export const TooltipTemplate: import("@microsoft/fast-element").ViewTemplate<Tooltip, any>;
+
 
 // Warnings were encountered during analysis:
 //
