@@ -45,6 +45,12 @@ export class Tabs extends FASTElement {
      */
     @attr
     public activeid: string;
+    public activeidChanged(): void {
+        if (this.tabIds) {
+            this.activeTabIndex = this.tabIds.indexOf(this.activeid);
+            this.setComponent();
+        }
+    }
 
     /**
      * @internal
@@ -301,7 +307,7 @@ export class Tabs extends FASTElement {
         });
     }
 
-    private adjust(adjustment: number): void {
+    public adjust(adjustment: number): void {
         this.prevActiveTabIndex = this.activeTabIndex;
         this.activeTabIndex = wrapInBounds(
             0,
